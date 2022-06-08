@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="clientLauncherPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="951.0" stylesheets="@../styles/clientLauncher.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientController">
+   <children>
+      <ImageView fx:id="imgview" fitHeight="565.0" fitWidth="1046.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/winbg.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="welcomeLabel" layoutX="643.0" layoutY="36.0" stylesheets="@../styles/clientLauncher.css" text="Welcome, ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameholderLabel" layoutX="736.0" layoutY="29.0" prefHeight="38.0" prefWidth="215.0" stylesheets="@../styles/clientLauncher.css" text="NAMEHOLDERHERE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="88.0" mnemonicParsing="false" onAction="#backMethod" style="-fx-background-color: #f1f1f1;" stylesheets="@../styles/clientLauncher.css" text="Back" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Button>
+      <MenuBar prefHeight="29.0" prefWidth="951.0" stylesheets="@../styles/clientLauncher.css">
+         <menus>
+            <Menu fx:id="optionsMenu" mnemonicParsing="false" text="Options">
+               <items>
+                  <MenuItem fx:id="settingsMenuItem" mnemonicParsing="false" onAction="#settingsMethod" text="Settings" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#exitMethod" text="Exit" />
+               </items>
+            </Menu>
+            <Menu fx:id="menuBar" mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#aboutMethod" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label fx:id="selectGamemodeLabel" layoutX="144.0" layoutY="84.0" stylesheets="@../styles/clientLauncher.css" text="Select Gamemode" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="gamemodeChoiceBox" layoutX="496.0" layoutY="98.0" prefHeight="26.0" prefWidth="209.0" style="-fx-background-color: #f1f1f1;" stylesheets="@../styles/clientLauncher.css" />
+      <Label fx:id="amountOfPlayersLabel" layoutX="133.0" layoutY="139.0" stylesheets="@../styles/clientLauncher.css" text="Amount of players" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="playerAmountSpinner" layoutX="496.0" layoutY="154.0" prefHeight="26.0" prefWidth="53.0" stylesheets="@../styles/clientLauncher.css" />
+      <Button fx:id="selectAvatarButton" layoutX="352.0" layoutY="332.0" mnemonicParsing="false" onAction="#selectAvatarMethod" prefHeight="64.0" prefWidth="248.0" style="-fx-background-color: #7bae37;" stylesheets="@../styles/clientLauncher.css" text="Select Avatar" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font></Button>
+      <Button fx:id="searchGameButton" layoutX="228.0" layoutY="421.0" mnemonicParsing="false" onAction="#searchGameMethod" prefHeight="64.0" prefWidth="248.0" style="-fx-background-color: #8560ae;" stylesheets="@../styles/clientLauncher.css" text="Search Game" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Button>
+      <Label fx:id="onlineLabel" layoutX="8.0" layoutY="30.0" stylesheets="@../styles/clientLauncher.css" text="Online" textFill="#32ff00">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ipAddressTextField" layoutX="496.0" layoutY="209.0" prefHeight="26.0" prefWidth="209.0" />
+      <Label fx:id="ipAddressLabel" layoutX="282.0" layoutY="194.0" stylesheets="@../styles/clientLauncher.css" text="IP Address" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <TextField fx:id="portTextField" layoutX="495.0" layoutY="267.0" prefHeight="25.0" prefWidth="100.0" />
+      <Label fx:id="portLabel" layoutX="400.0" layoutY="249.0" stylesheets="@../styles/clientLauncher.css" text="Port" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <Button fx:id="hostGameButton" layoutX="485.0" layoutY="421.0" mnemonicParsing="false" onAction="#hostGameMethod" prefHeight="64.0" prefWidth="248.0" style="-fx-background-color: #fc9c46;" stylesheets="@../styles/clientLauncher.css" text="Host Game" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

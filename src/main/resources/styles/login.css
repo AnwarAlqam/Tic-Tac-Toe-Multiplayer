@@ -1,0 +1,15 @@
+#googleButton{
+	-fx-background-color: #34A853;
+}
+
+#facebookButton{
+	-fx-background-color: #3B5998;
+}
+
+#appleButton{
+	-fx-background-color: #A2AAAD;
+}
+
+#guestButton{
+	-fx-background-color: #d47435;
+}

@@ -1,0 +1,19 @@
+#backButton {
+	-fx-background-color: #1c78ba;
+}
+
+#selectAvatarButton {
+	-fx-background-color: #14b84e;
+}
+
+#searchGameButton {
+	-fx-background-color: #915ca3;
+}
+
+#hostGameButton {
+    -fx-background-color: #e38724;
+}
+
+#onlineLabel {
+	-fx-text-fill: #61B136;
+}

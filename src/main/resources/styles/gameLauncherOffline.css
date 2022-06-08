@@ -1,0 +1,15 @@
+#backButton {
+	-fx-background-color: #1c78ba;
+}
+
+#selectAvatarButton {
+	-fx-background-color: #2fd068;
+}
+
+#startGameButton {
+	-fx-background-color: #915ca3;
+}
+
+#offlineLabel {
+	-fx-text-fill: #989898;
+}

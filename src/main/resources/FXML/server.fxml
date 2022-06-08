@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="750.0" stylesheets="@../styles/server.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ServerController">
+   <children>
+      <ImageView fx:id="imgview" fitHeight="432.0" fitWidth="842.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/winbg.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="8.0" layoutY="38.0" stylesheets="@../styles/server.css" text="Port:" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="portTextField" layoutX="85.0" layoutY="45.0" stylesheets="@../styles/server.css" />
+      <Button fx:id="turnOnButton" layoutX="256.0" layoutY="43.0" mnemonicParsing="false" onAction="#turnOnMethod" stylesheets="@../styles/server.css" text="Turn ON" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="443.0" layoutY="41.0" stylesheets="@../styles/server.css" text="Amount of Players:" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="amountOfPlayersLabel" layoutX="694.0" layoutY="39.0" stylesheets="@../styles/server.css" text="0" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <ListView fx:id="connectionsListView" layoutX="30.0" layoutY="144.0" prefHeight="274.0" prefWidth="295.0" stylesheets="@../styles/server.css" />
+      <ListView fx:id="resultsListView" layoutX="433.0" layoutY="144.0" prefHeight="274.0" prefWidth="295.0" stylesheets="@../styles/server.css" />
+      <Label layoutX="93.0" layoutY="102.0" stylesheets="@../styles/server.css" text="Connections" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="531.0" layoutY="102.0" stylesheets="@../styles/server.css" text="Results" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="turnOffButton" layoutX="348.0" layoutY="43.0" mnemonicParsing="false" onAction="#turnOffMethod" stylesheets="@../styles/server.css" text="Turn OFF" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

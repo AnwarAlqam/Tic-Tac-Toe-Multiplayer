@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="gameLauncherPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="951.0" stylesheets="@../styles/gameLauncherOffline.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameLauncherOfflineController">
+   <children>
+      <ImageView fx:id="imgview" fitHeight="565.0" fitWidth="1046.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/winbg.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="welcomeLabel" layoutX="643.0" layoutY="36.0" stylesheets="@../styles/gameLauncherOffline.css" text="Welcome, ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameholderLabel" layoutX="736.0" layoutY="29.0" prefHeight="38.0" prefWidth="215.0" stylesheets="@../styles/gameLauncherOffline.css" text="NAMEHOLDERHERE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="88.0" mnemonicParsing="false" onAction="#backMethod" style="-fx-background-color: #f1f1f1;" stylesheets="@../styles/gameLauncherOffline.css" text="Back" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Button>
+      <MenuBar prefHeight="29.0" prefWidth="951.0" stylesheets="@../styles/gameLauncherOffline.css">
+         <menus>
+            <Menu fx:id="optionsMenu" mnemonicParsing="false" text="Options">
+               <items>
+                  <MenuItem fx:id="settingsMenuItem" mnemonicParsing="false" onAction="#settingsMethod" text="Settings" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#exitMethod" text="Exit" />
+               </items>
+            </Menu>
+            <Menu fx:id="menuBar" mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#aboutMethod" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label fx:id="selectGamemodeLabel" layoutX="156.0" layoutY="134.0" stylesheets="@../styles/gameLauncherOffline.css" text="Select Gamemode" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="gamemodeChoiceBox" layoutX="513.0" layoutY="148.0" prefHeight="26.0" prefWidth="215.0" style="-fx-background-color: #f1f1f1;" stylesheets="@../styles/gameLauncherOffline.css" />
+      <Label fx:id="amountOfPlayersLabel" layoutX="147.0" layoutY="197.0" stylesheets="@../styles/gameLauncherOffline.css" text="Amount of players" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="playerAmountSpinner" layoutX="513.0" layoutY="210.0" prefHeight="29.0" prefWidth="59.0" />
+      <Button fx:id="selectAvatarButton" layoutX="338.0" layoutY="310.0" mnemonicParsing="false" onAction="#selectAvatarMethod" prefHeight="64.0" prefWidth="276.0" style="-fx-background-color: #7bae37;" stylesheets="@../styles/gameLauncherOffline.css" text="Select Avatar" textAlignment="RIGHT" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font></Button>
+      <Button fx:id="startGameButton" layoutX="338.0" layoutY="405.0" mnemonicParsing="false" onAction="#startGameMethod" prefHeight="64.0" prefWidth="276.0" style="-fx-background-color: #f4bd1a;" stylesheets="@../styles/gameLauncherOffline.css" text="Start Game" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Button>
+      <Label fx:id="offlineLabel" layoutX="7.0" layoutY="29.0" stylesheets="@../styles/gameLauncherOffline.css" text="Offline" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

@@ -1,0 +1,15 @@
+#playOnlineButton {
+	-fx-background-color: #16A7B8;
+}
+
+#playOfflineButton {
+	-fx-background-color: #F57B3A;
+}
+
+#storeButton {
+	-fx-background-color: #6EBE45;
+}
+
+#logoutButton {
+	-fx-background-color: #1c78ba;
+}

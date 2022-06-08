@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="mainMenuPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="951.0" stylesheets="@../styles/mainMenu.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainMenuController">
+   <children>
+      <ImageView fx:id="imgview" fitHeight="565.0" fitWidth="1231.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/menubg.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="playOnlineButton" layoutX="312.0" layoutY="248.0" mnemonicParsing="false" onAction="#playOnlineMethod" prefHeight="89.0" prefWidth="327.0" style="-fx-background-color: #B3DEE5;" stylesheets="@../styles/mainMenu.css" text="Play Online" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Button>
+      <Button fx:id="storeButton" layoutX="312.0" layoutY="455.0" mnemonicParsing="false" onAction="#storeMethod" prefHeight="27.0" prefWidth="327.0" style="-fx-background-color: #b9c44a;" stylesheets="@../styles/mainMenu.css" text="Store" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Button>
+      <Label fx:id="welcomeLabel" layoutX="643.0" layoutY="36.0" stylesheets="@../styles/mainMenu.css" text="Welcome, ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameholderLabel" layoutX="736.0" layoutY="29.0" prefHeight="38.0" prefWidth="215.0" stylesheets="@../styles/mainMenu.css" text="NAMEHOLDERHERE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="logoutButton" layoutX="14.0" layoutY="88.0" mnemonicParsing="false" onAction="#logoutMethod" style="-fx-background-color: #c45a64;" stylesheets="@../styles/mainMenu.css" text="Log Out" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Button>
+      <MenuBar fx:id="menuBar" prefHeight="29.0" prefWidth="951.0" stylesheets="@../styles/mainMenu.css">
+        <menus>
+          <Menu fx:id="menuOne" mnemonicParsing="false" text="Options">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#settingsMethod" text="Settings" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#exitMethod" text="Exit" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuTwo" mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#aboutMethod" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="playOfflineButton" layoutX="312.0" layoutY="337.0" mnemonicParsing="false" onAction="#playOfflineMethod" prefHeight="64.0" prefWidth="327.0" style="-fx-background-color: #fae6b1;" stylesheets="@../styles/mainMenu.css" text="Play Offline" textFill="#030303">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
